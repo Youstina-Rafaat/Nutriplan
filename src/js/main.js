@@ -89,7 +89,7 @@ function goBackToMeals() {
     mealDetails.classList.add("hidden")
     title.textContent = "Meals & Recipes"
     caption.textContent = "Discover delicious and nutritious recipes tailored for you"
-    history.pushState(null, "", "#meals")
+    history.back()
 }
 
 gridView.addEventListener("click", function () {
