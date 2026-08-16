@@ -379,7 +379,7 @@ async function getProductsByCategory(category) {
 document.getElementById("products-grid").addEventListener("click", async function (e) {
     let card = e.target.closest(".product-card")
     if (!card) return
-    let item = await api.fetchProductByBarcode(card.dataset.barcode)
+    let item = state.allProducts.find(p => p.barcode === card.dataset.barcode)
     if (!item) return
     ui.fillProductModal(item)
     document.getElementById("product-detail-modal").classList.remove("hidden")
