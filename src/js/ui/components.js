@@ -402,14 +402,19 @@ export function showNutrition(nutrition) {
                     </div>
                   </div>
 
-                  <div class="mt-6 pt-6 border-t border-gray-100">
-                    <h3 class="text-sm font-semibold text-gray-900 mb-3">other</h3>
-                    <div class="grid grid-cols-2 gap-3 text-sm">
-                      <div class="flex justify-between">
+<div class="mt-6 pt-6 border-t border-gray-100">
+                <h3 class="text-sm font-semibold text-gray-900 mb-3">Other</h3>
+                <div class="grid grid-cols-2 gap-3 text-sm">
+                    <div class="flex justify-between">
                         <span class="text-gray-600">Cholesterol</span>
-                      </div>
+                        <span class="font-medium">${nutrition.perServing.cholesterol}mg</span>
                     </div>
-                  </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Sodium</span>
+                        <span class="font-medium">${nutrition.perServing.sodium}mg</span>
+                    </div>
+                </div>
+            </div>
                 </div>
               </div>
             </div>
