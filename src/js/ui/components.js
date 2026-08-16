@@ -315,10 +315,10 @@ if (novaBox) {
     modal.querySelector("#modal-calories-value").textContent = Number(item.nutrients.calories).toFixed(0)
 let total = item.nutrients.protein + item.nutrients.carbs + item.nutrients.fat + item.nutrients.sugar
 
-modal.querySelector("#modal-protein-bar").style.width = `${Math.round((item.nutrients.protein / total) * 100)}%`
-modal.querySelector("#modal-carbs-bar").style.width = `${Math.round((item.nutrients.carbs / total) * 100)}%`
-modal.querySelector("#modal-fat-bar").style.width = `${Math.round((item.nutrients.fat / total) * 100)}%`
-modal.querySelector("#modal-sugar-bar").style.width = `${Math.round((item.nutrients.sugar / total) * 100)}%`
+modal.querySelector("#modal-protein-bar").style.width = total > 0 ? `${Math.round((item.nutrients.protein / total) * 100)}%` : "0%"
+modal.querySelector("#modal-carbs-bar").style.width = total > 0 ? `${Math.round((item.nutrients.carbs / total) * 100)}%` : "0%"
+modal.querySelector("#modal-fat-bar").style.width = total > 0 ? `${Math.round((item.nutrients.fat / total) * 100)}%` : "0%"
+modal.querySelector("#modal-sugar-bar").style.width = total > 0 ? `${Math.round((item.nutrients.sugar / total) * 100)}%` : "0%"
 
 modal.querySelector("#modal-protein-value").textContent = Number(item.nutrients.protein).toFixed(1) + "g"
 
