@@ -293,15 +293,24 @@ export function fillProductModal(item) {
         if (labelEl) labelEl.textContent = gradeLabel
     }
 
-    let novaBox = badgeBoxes[1]
-    if (novaBox) {
-        if (item.novaGroup) {
-            novaBox.classList.remove("hidden")
-            novaBox.querySelector("span").textContent = item.novaGroup
-        } else {
-            novaBox.classList.add("hidden")
-        }
+let novaLabels = {
+    1: "Unprocessed",
+    2: "Processed ingredients",
+    3: "Processed",
+    4: "Ultra-processed"
+}
+
+let novaBox = badgeBoxes[1]
+if (novaBox) {
+    if (item.novaGroup) {
+        novaBox.classList.remove("hidden")
+        novaBox.querySelector("span").textContent = item.novaGroup
+        let novaLabelEl = novaBox.querySelector("p:not(.font-bold)")
+        if (novaLabelEl) novaLabelEl.textContent = novaLabels[item.novaGroup] || "Unknown"
+    } else {
+        novaBox.classList.add("hidden")
     }
+}
 
     modal.querySelector("#modal-calories-value").textContent = Number(item.nutrients.calories).toFixed(0)
 let total = item.nutrients.protein + item.nutrients.carbs + item.nutrients.fat + item.nutrients.sugar
@@ -505,7 +514,7 @@ export function showDetails(meal) {
               <div class="absolute bottom-0 left-0 right-0 p-8">
                 <div class="flex items-center gap-3 mb-3">
                   <span class="px-3 py-1 bg-emerald-500 text-white text-sm font-semibold rounded-full">${meal.category}</span>
-                  <span class="px-3 py-1 bg-blue-500 text-white text-sm font-semibold rounded-full">${meal.area}</span>
+                    ${meal.area ? `<span class="px-3 py-1 bg-blue-500 text-white text-sm font-semibold rounded-full">${meal.area}</span>` : ""}
                 </div>
                 <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">${meal.name}</h1>
                 <div class="flex items-center gap-6 text-white/90">

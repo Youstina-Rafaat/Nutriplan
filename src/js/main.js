@@ -130,7 +130,7 @@ async function loadMealNutrition(meal) {
     state.currentMeal = meal
     state.currentNutrition = nutrition
 
-    document.getElementById("hero-servings").textContent = "1 serving"
+    document.getElementById("hero-servings").textContent = `${nutrition.servings} servings`
     document.getElementById("hero-calories").textContent = `${nutrition.perServing.calories} kcal`
 
     let slot = document.getElementById("meal-details-nutrition-slot")
