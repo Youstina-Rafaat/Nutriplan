@@ -632,17 +632,15 @@
                 <div class="flex-1">
                     <p class="text-sm text-emerald-600 font-semibold mb-1">Jaouda</p>
                     <h2 class="text-2xl font-bold text-gray-900 mb-2">Perly</h2>
-                    <p class="text-sm text-gray-500 mb-3">100 g</p>
                     
                     <div class="flex items-center gap-3">
                         
                             <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg" style="background-color: #03814120">
                                 <span class="w-8 h-8 rounded flex items-center justify-center text-white font-bold" style="background-color: #038141">
-                                    A
                                 </span>
                                 <div>
                                     <p class="text-xs font-bold" style="color: #038141">Nutri-Score</p>
-                                    <p class="text-[10px] text-gray-600">Excellent</p>
+                                    <p class="text-[10px] text-gray-600"></p>
                                 </div>
                             </div>
                         
@@ -650,11 +648,10 @@
                         
                             <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg" style="background-color: #ee810020">
                                 <span class="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold" style="background-color: #ee8100">
-                                    3
                                 </span>
                                 <div>
                                     <p class="text-xs font-bold" style="color: #ee8100">NOVA</p>
-                                    <p class="text-[10px] text-gray-600">Processed</p>
+                                    <p class="text-[10px] text-gray-600">Ultra-processed</p>
                                 </div>
                             </div>
                         
@@ -672,77 +669,56 @@
                 </h3>
                 
                 <div class="text-center mb-4 pb-4 border-b border-emerald-200">
-                    <p class="text-4xl font-bold text-gray-900">97</p>
-                    <p class="text-sm text-gray-500">Calories</p>
+                    <p id="modal-calories-value" class="text-4xl font-bold text-gray-900"></p>
+                    <p  class="text-sm text-gray-500">Calories</p>
                 </div>
                 
                 <div class="grid grid-cols-4 gap-4">
-                    <div class="text-center">
-                        <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
-                            <div class="bg-emerald-500 h-2 rounded-full" style="width: 16%"></div>
-                        </div>
-                        <p class="text-lg font-bold text-emerald-600">8.0g</p>
-                        <p class="text-xs text-gray-500">Protein</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
-                            <div class="bg-blue-500 h-2 rounded-full" style="width: 9.4%"></div>
-                        </div>
-                        <p class="text-lg font-bold text-blue-600">9.4g</p>
-                        <p class="text-xs text-gray-500">Carbs</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
-                            <div class="bg-purple-500 h-2 rounded-full" style="width: 4.615384615384616%"></div>
-                        </div>
-                        <p class="text-lg font-bold text-purple-600">3.0g</p>
-                        <p class="text-xs text-gray-500">Fat</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
-                            <div class="bg-orange-500 h-2 rounded-full" style="width: 18.8%"></div>
-                        </div>
-                        <p class="text-lg font-bold text-orange-600">9.4g</p>
-                        <p class="text-xs text-gray-500">Sugar</p>
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-3 gap-4 mt-4 pt-4 border-t border-emerald-200">
-                    <div class="text-center">
-                        <p class="text-sm font-semibold text-gray-900">0.0g</p>
-                        <p class="text-xs text-gray-500">Saturated Fat</p>
-                    </div>
-                    <div class="text-center">
-                        <p class="text-sm font-semibold text-gray-900">0.0g</p>
-                        <p class="text-xs text-gray-500">Fiber</p>
-                    </div>
-                    <div class="text-center">
-                        <p class="text-sm font-semibold text-gray-900">0.00g</p>
-                        <p class="text-xs text-gray-500">Salt</p>
-                    </div>
-                </div>
-            </div>
-            
-            
-                <div class="bg-gray-50 rounded-xl p-5 mb-6">
-                    <h3 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                        <i class="text-gray-600" data-fa-i2svg=""><svg class="svg-inline--fa fa-list" data-prefix="fas" data-icon="list" role="img" viewBox="0 0 512 512" aria-hidden="true" data-fa-i2svg=""><path fill="currentColor" d="M40 48C26.7 48 16 58.7 16 72l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24L40 48zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L192 64zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zM16 232l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0z"></path></svg></i>
-                        Ingredients
-                    </h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">milk cream, cream, sugar, banana, bacteria</p>
-                </div>
-            
-            
-            
-                <div class="bg-red-50 rounded-xl p-5 mb-6 border border-red-200">
-                    <h3 class="font-bold text-red-700 mb-2 flex items-center gap-2">
-                        <i data-fa-i2svg=""><svg class="svg-inline--fa fa-triangle-exclamation" data-prefix="fas" data-icon="triangle-exclamation" role="img" viewBox="0 0 512 512" aria-hidden="true" data-fa-i2svg=""><path fill="currentColor" d="M256 0c14.7 0 28.2 8.1 35.2 21l216 400c6.7 12.4 6.4 27.4-.8 39.5S486.1 480 472 480L40 480c-14.1 0-27.2-7.4-34.4-19.5s-7.5-27.1-.8-39.5l216-400c7-12.9 20.5-21 35.2-21zm0 352a32 32 0 1 0 0 64 32 32 0 1 0 0-64zm0-192c-18.2 0-32.7 15.5-31.4 33.7l7.4 104c.9 12.5 11.4 22.3 23.9 22.3 12.6 0 23-9.7 23.9-22.3l7.4-104c1.3-18.2-13.1-33.7-31.4-33.7z"></path></svg></i>
-                        Allergens
-                    </h3>
-                    <p class="text-sm text-red-600">banana, milk</p>
-                </div>
-            
-            
+    <div class="text-center">
+        <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+            <div id="modal-protein-bar" class="bg-emerald-500 h-2 rounded-full" style="width: 0%"></div>
+        </div>
+        <p id="modal-protein-value" class="text-lg font-bold text-emerald-600"></p>
+        <p class="text-xs text-gray-500">Protein</p>
+    </div>
+    <div class="text-center">
+        <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+            <div id="modal-carbs-bar" class="bg-blue-500 h-2 rounded-full" style="width: 0%"></div>
+        </div>
+        <p id="modal-carbs-value" class="text-lg font-bold text-blue-600"></p>
+        <p class="text-xs text-gray-500">Carbs</p>
+    </div>
+    <div class="text-center">
+        <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+            <div id="modal-fat-bar" class="bg-purple-500 h-2 rounded-full" style="width: 0%"></div>
+        </div>
+        <p id="modal-fat-value" class="text-lg font-bold text-purple-600"></p>
+        <p class="text-xs text-gray-500">Fat</p>
+    </div>
+    <div class="text-center">
+        <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+            <div id="modal-sugar-bar" class="bg-orange-500 h-2 rounded-full" style="width: 0%"></div>
+        </div>
+        <p id="modal-sugar-value" class="text-lg font-bold text-orange-600"></p>
+        <p class="text-xs text-gray-500">Sugar</p>
+    </div>
+</div>
+
+<div class="grid grid-cols-3 gap-4 mt-4 pt-4 border-t border-emerald-200">
+      <div class="text-center">
+        <p id="modal-sodium" class="text-sm font-semibold text-gray-900"></p>
+        <p class="text-xs text-gray-500">Sodium</p>
+    </div>
+    <div class="text-center">
+        <p id="modal-fiber" class="text-sm font-semibold text-gray-900"></p>
+        <p class="text-xs text-gray-500">Fiber</p>
+    </div>
+    <div class="text-center">
+        <p id="modal-salt" class="text-sm font-semibold text-gray-900"></p>
+        <p class="text-xs text-gray-500">Salt</p>
+    </div>
+</div>
+</div>
             <div class="flex gap-3">
                 <button class="add-product-to-log flex-1 py-3 bg-emerald-600 text-white rounded-xl font-semibold hover:bg-emerald-700 transition-all" data-barcode="6111242100992">
                     <i class="mr-2" data-fa-i2svg=""><svg class="svg-inline--fa fa-plus" data-prefix="fas" data-icon="plus" role="img" viewBox="0 0 448 512" aria-hidden="true" data-fa-i2svg=""><path fill="currentColor" d="M256 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 160-160 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l160 0 0 160c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160 160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-160 0 0-160z"></path></svg></i>Log This Food

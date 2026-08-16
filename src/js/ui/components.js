@@ -267,6 +267,7 @@ export function fillProductModal(item) {
     modal.querySelector("img").alt = item.name
     modal.querySelector("h2").textContent = item.name
 
+
     let brandEl = modal.querySelector(".text-emerald-600.font-semibold")
     if (brandEl) brandEl.textContent = item.brand
 
@@ -302,13 +303,26 @@ export function fillProductModal(item) {
         }
     }
 
-    modal.querySelector(".text-4xl").textContent = Number(item.nutrients.calories).toFixed(1)
+    modal.querySelector("#modal-calories-value").textContent = Number(item.nutrients.calories).toFixed(0)
+let total = item.nutrients.protein + item.nutrients.carbs + item.nutrients.fat + item.nutrients.sugar
 
-    let statBlocks = modal.querySelectorAll(".grid.grid-cols-4.gap-4 .text-center")
-    if (statBlocks[0]) statBlocks[0].querySelector(".text-lg").textContent = Number(item.nutrients.protein).toFixed(1) + "g"
-    if (statBlocks[1]) statBlocks[1].querySelector(".text-lg").textContent = Number(item.nutrients.carbs).toFixed(1) + "g"
-    if (statBlocks[2]) statBlocks[2].querySelector(".text-lg").textContent = Number(item.nutrients.fat).toFixed(1) + "g"
-    if (statBlocks[3]) statBlocks[3].querySelector(".text-lg").textContent = Number(item.nutrients.sugar).toFixed(1) + "g"
+modal.querySelector("#modal-protein-bar").style.width = `${Math.round((item.nutrients.protein / total) * 100)}%`
+modal.querySelector("#modal-carbs-bar").style.width = `${Math.round((item.nutrients.carbs / total) * 100)}%`
+modal.querySelector("#modal-fat-bar").style.width = `${Math.round((item.nutrients.fat / total) * 100)}%`
+modal.querySelector("#modal-sugar-bar").style.width = `${Math.round((item.nutrients.sugar / total) * 100)}%`
+
+modal.querySelector("#modal-protein-value").textContent = Number(item.nutrients.protein).toFixed(1) + "g"
+
+modal.querySelector("#modal-carbs-value").textContent = Number(item.nutrients.carbs).toFixed(1) + "g"
+
+modal.querySelector("#modal-fat-value").textContent = Number(item.nutrients.fat).toFixed(1) + "g"
+
+modal.querySelector("#modal-sugar-value").textContent = Number(item.nutrients.sugar).toFixed(1) + "g"
+
+modal.querySelector("#modal-sugar-value").textContent = Number(item.nutrients.sugar).toFixed(1) + "g"
+modal.querySelector("#modal-sodium").textContent = Number(item.nutrients.sodium).toFixed(1) + "g"
+modal.querySelector("#modal-fiber").textContent = Number(item.nutrients.fiber).toFixed(1) + "g"
+modal.querySelector("#modal-salt").textContent = (Number(item.nutrients.sodium) * 2.5).toFixed(2) + "g"
 
     let ingredientsBox = modal.querySelector(".bg-gray-50.rounded-xl.p-5.mb-6")
     if (ingredientsBox) ingredientsBox.classList.add("hidden")
