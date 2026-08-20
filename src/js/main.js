@@ -21,6 +21,19 @@ let mealSearchInput = document.getElementById("search-input")
 let logModal = document.getElementById("log-meal-modal")
 let input = document.getElementById("meal-servings")
 
+
+let loadingOverlay = document.getElementById("app-loading-overlay")
+if (loadingOverlay) {
+    loadingOverlay.style.display = "flex"
+    loadingOverlay.style.opacity = "1"
+    setTimeout(function () {
+        loadingOverlay.style.opacity = "0"
+        setTimeout(function () {
+            loadingOverlay.remove()
+        }, 500)
+    }, 1500)
+}
+
 btnMeals.addEventListener("click", function (e) {
     e.preventDefault()
     mealCategories.classList.remove("hidden")
@@ -436,3 +449,4 @@ if (location.hash === "" || location.hash === "#") {
 } else if (location.hash.includes("#foodlog")) {
     btnFoodLog.click()
 }
+
